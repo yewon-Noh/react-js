@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Library from './jsx/Library';
+import Clock from './rendering_elements/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Library />
-  </React.StrictMode>
-);
+function tick() {
+  const element = (
+    <React.StrictMode>
+      <Clock />
+    </React.StrictMode>
+  )
+  root.render(element);
+}
+
+setInterval(tick, 1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
