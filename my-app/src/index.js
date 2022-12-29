@@ -4,19 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Clock from './rendering_elements/Clock';
+import CommentList from './props/CommentList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-function tick() {
-  const element = (
-    <React.StrictMode>
-      <Clock />
-    </React.StrictMode>
-  )
-  root.render(element);
-}
-
-setInterval(tick, 1000);
+root.render(
+  <React.StrictMode>
+    <CommentList />
+  </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
